@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+    <!-- custome css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Join Now-HRS</title>
+</head>
+<body>
+
+    <!-- header section -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <a href="#home" class="logo">HRS</a>
+                <nav class="nav navbar ">
+                    <a href="#home">Home</a>
+                    <a href="#Hotels">Hotels</a>
+                    <a href="#about">about</a>
+                    <a href="#contact">contact</a>
+                    <a href="signUp.html">Register</a>
+                </nav>
+
+                <a href="login.html" class="link-btn">Sign Up</a>
+
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+        </div>
+    </header>
+      <!-- header section ends -->
+    
+    <section class="Register-wrap" id="home">
+        <div class="register-title">
+            <h1>Join HRS</h1>
+            <h3>To enjoy member benefits, exclusive member rate and more</h3>
+
+            <div class="box-container container"> 
+      
+                <div class="box">
+                   <img src="images/premium.png" alt="premium">
+                   <p>Member Exclusive Offers</p>
+                </div>
+          
+                <div class="box">
+                   <img src="images/phone.png" alt="phone">
+                   <p>Mobile Check-In & -Out</p>
+                </div>
+          
+                <div class="box">
+                   <img src="images/moon.png" alt="moon">
+                   <p>Earn Free Nights</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-content">
+            <form class="register-form" method="post">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="Mobile">Mobile No</label>
+                    <input type="number" class="form-control" id="Mobile" placeholder="Enter Mobile No">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email Address</label>
+                    <input type="email" class="form-control" id="Email" placeholder="Enter Email Address">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="register btn btn-primary">Submit</button>
+              </form>
+        </div>
+  
+    </section>
+
+    
+    
+
+    <!-- customer JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap js cdn -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
