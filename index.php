@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include "server.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +33,10 @@
                     <a href="#Hotels">Hotels</a>
                     <a href="#about">about</a>
                     <a href="#contact">contact</a>
-                    <a href="signUp.html">Register</a>
+                    <a href="signUp.php">Register</a>
                 </nav>
 
-                <a href="login.html" class="link-btn">Sign Up</a>
+                <a href="login.php" class="link-btn">Sign in</a>
 
                 <div id="menu-btn" class="fas fa-bars"></div>
             </div>
@@ -49,25 +54,41 @@
             <div class="content text-center text-md-left">
                <h3>Book Early and Save with Flexibility</h3>
                <p>Book in advance and save up to 20% with complimentary date changes..</p>
-               <a href="#contact" class="link-btn">Join Now</a>
+               <a href="login.php" class="link-btn">Join Now</a>
             </div>
 
             <div class="form-content text-center text-md-center">
-               <form action="">
+               <form action="index.php" method="POST">
                   <div class="form-group">
-                     <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp" placeholder="Find a Hotel or House">
+                     <input type="text" class="form-control" id="Find_hotel" name="hotel_name" placeholder="Find a Hotel or House" required>
                    </div>
                    <div class="form-group">
-                     <input type="date" class="form-control" id="lastName" placeholder="Pick a date">
+                     <input name="check-in-date" placeholder="Check in date" class="form-control" type="text" id="check-in-date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
                    </div>
                    <div class="form-group">
-                       <input type="date" class="form-control" id="Mobile" placeholder="Pick a date">
+                   <input class="form-control" placeholder="Check Out date"  name="check-out-date" type="text" id="check-in-date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
                    </div>
                    <div class="form-group">
-                       <input type="number" class="form-control" id="Email" placeholder="No of Occupants">
+                       <input type="number" class="form-control" name="Occupants" placeholder="No of Occupants" required> 
                    </div>
-                   <a href="#" class="link-btn book-now">Book Now</a>
+                   <button name="submit" class="link-btn book-now">Book Now</button>
                </form>
+
+               <?php
+                  if(isset($_POST['submit'])){
+                     $_SESSION['hotel'] = $_POST['hotel_name'];
+                     $_SESSION['Checkin_Date'] = $_POST['check-in-date'];
+                     $_SESSION['CheckOut_Date'] = $_POST['check-out-date'];
+                     $_SESSION['No_of_Occupants'] = $_POST['Occupants'];
+
+                    ?>
+                        <script type="text/javascript">
+                            window.location="New_Reservation.php"
+                        </script>
+                    <?php
+
+                  }
+               ?>
               
             </div>
 
@@ -224,7 +245,7 @@
                      <h5 class="text-white mb-3">Special Offers and
                         Teardrop News</h5>
                      <p class="small text-muted">Sign up here to receive news of exclusive offers.</p>
-                     <form action="#">
+                     <form action="index.php" method="POST">
                         <div class="input-group mb-3">
                            <input class="form-control" type="text" placeholder="Send Us Your Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>

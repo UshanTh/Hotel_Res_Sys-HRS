@@ -206,14 +206,16 @@ html{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:2rem;
+    text-align: center;
  }
  
 .box-container .box{
     text-align: center;
-    padding:2rem;
-    background-color: var(--white);
+    padding:1rem;
+    background-color: var(--light-bg);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
+    width: 100%;
  }
  
 .box-container .box img{
@@ -236,8 +238,12 @@ html{
 /* footer section */
 
  footer{
-   background-color: var(--blue);
-   padding: 5rem 0;
+    background-color: var(--blue);
+    padding: 5rem 0;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+   /* position: fixed; */
  }
 
  footer .container{
@@ -386,6 +392,7 @@ html{
    border-color: #2691d9;
    transition: .5s;
    background-color: var(--light-color);
+   
  }
  .form-center .signup_link{
    margin: 30px 0;
@@ -403,10 +410,10 @@ html{
  
  /* register page */
 .Register-wrap{
-  position: absolute;
-  top: 7.8%;
+  margin-top: 3%;
   text-align: center;
   width: 100%;
+  /* position: fixed; */
 }
 
 .Register-wrap h1{
@@ -519,6 +526,109 @@ html{
      }
   
 }
+
+/* card details */
+.form-check-inline{
+  width: 40%;
+  display: inline-flex;
+  /* justify-content: space-between; */
+}
+
+.form-check-inline-left{
+  width: 30%;
+  display: inline-flex;
+  text-align: right;
+  /* justify-content: space-between; */
+}
+
+.form-group select{
+  font-size: 1.5rem;
+  border: 1px solid rgb(187, 185, 185) !important;
+}
+
+
+/* Reservation form */
+
+ .reservation .register-title h3{
+  padding: 2rem 4rem;
+  text-align: left;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reservation-form{
+  /* background-color: #c6c6c6 !important; */
+  padding: 3rem;
+  text-align: center;
+  border-top: 1px solid rgb(201, 201, 201) !important;
+  border-bottom: 1px solid rgb(201, 201, 201) !important;
+}
+
+.reservation-form .form-group{
+  display: inline-flex !important;
+  padding: 1rem;
+}
+
+.reservation-form .form-group input{
+  padding: 2rem;
+  font-size: 1.5rem;
+  border: 1px solid rgb(201, 201, 201) !important;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+} 
+
+.room-details .container{
+  padding: 1rem 0; 
+  width: 100%;
+  /* border-bottom: 1px solid rgb(201, 201, 201) !important; */
+  box-shadow: var(--box-shadow);
+}
+
+.room-details .container .row{
+  flex-wrap: nowrap;
+} 
+
+.room-details .container img{
+  height: auto;
+}
+
+.room-details .container .col{
+  margin-left: 3rem;
+  margin-right: 2rem;
+  text-align: center;
+  align-items: stretch;
+  justify-items: flex-start;
+}
+
+.room-details .container .row.content{
+  margin-left: 4rem;
+  width: auto;
+  padding: 0rem 1.5rem;
+}
+
+.room-details .container .row .content h3{
+  font-size: 3rem;
+}
+
+.room-details .container .row .content p{
+  font-size: 1.5rem;
+}
+
+.room-details .container .row .content ul{
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+.room-details .container .row .link-btn{
+  background-color: rgb(227, 208, 37);
+}
+
+.room-details .container .row .link-btn:hover{
+  background-color: rgb(255, 230, 1);
+}
+
+
 
 @media (max-width: 500px){
     html{

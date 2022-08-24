@@ -1,3 +1,10 @@
+<?php
+    include "server.php";
+    include "header.php";
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
@@ -14,30 +21,16 @@
 
     <!-- custome css -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style type="text/css">
+      body{
+        background-color: #a2d2ff;
+      }
+    </style>
   </head>
 
-  <body style="background: url(images/Home_BG.jpg);">
+  <body>
 
-    <div class="form-center">
-      <h1>Sign In</h1>
-      <form class="login-form" method="post">
-        <div class="txt_field">
-          <input name="username" type="text" required>
-          <span></span>
-          <label>Username</label>
-        </div>
-        <div class="txt_field">
-          <input class="password" type="password" required>
-          <span></span>
-          <label>Password</label>
-        </div>
-        <div class="pass">Forgot Password?</div>
-        <input class="login" type="submit" value="Login">
-        <div class="signup_link">
-          Not a member? <a href="#">Register</a>
-        </div>
-      </form>
-    </div>
 
     <!-- customer JS -->
     <script src="js/script.js"></script>
